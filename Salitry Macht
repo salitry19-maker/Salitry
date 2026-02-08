@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Puzzle 2D</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MAPA SAGA -->
+<div id="saga">
+  <h1>👑 Royal Puzzle</h1>
+  <div id="path"></div>
+</div>
+
+<!-- JUEGO -->
+<div id="game" class="hidden">
+  <header>
+    <button onclick="backToMap()">⬅</button>
+    <div>Nivel <span id="levelNum"></span></div>
+    <div>Mov: <span id="moves"></span></div>
+  </header>
+
+  <div id="objectives"></div>
+
+  <canvas id="gameCanvas" width="384" height="384"></canvas>
+
+  <footer>
+    <button onclick="selectBooster('bomb')">💣</button>
+    <button onclick="selectBooster('rocket')">🚀</button>
+    <button onclick="selectBooster('rainbow')">🌈</button>
+  </footer>
+</div>
+
+<script src="levels.js"></script>
+<script src="map.js"></script>
+<script src="game2d.js"></script>
+</body>
+</html>
